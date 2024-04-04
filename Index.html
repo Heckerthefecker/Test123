@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease-in-out;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            animation: slideInUp 1s ease-in-out;
+        }
+        @keyframes slideInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .hero {
+            background-image: url('apple_hero.jpg');
+            background-size: cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .product {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+            width: 300px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .hidden {
+            display: none;
+        }
+        #appleLogo {
+            width: 100px;
+            height: 100px;
+            background-image: url('apple_logo.png');
+            background-size: cover;
+            border-radius: 50%;
+            animation: spin 2s linear infinite;
+            cursor: pointer;
+        }
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        .easter-egg {
+            font-size: 24px;
+            color: red;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header onclick="revealEasterEgg()">
+        <div id="appleLogo"></div>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Services</a>
+        <a href="#">Support</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div class="container">
+        <div class="hero">
+            <h1>Discover the latest from Apple</h1>
+        </div>
+        <div class="products">
+            <div class="product">
+                <img src="iphone.jpg" alt="iPhone">
+                <h2>iPhone</h2>
+                <p>Experience the power of iPhone.</p>
+            </div>
+            <div class="product">
+                <img src="macbook.jpg" alt="MacBook">
+                <h2>MacBook</h2>
+                <p>The new MacBook. Light years ahead.</p>
+            </div>
+            <div class="product">
+                <img src="ipad.jpg" alt="iPad">
+                <h2>iPad</h2>
+                <p>iPad. Like a computer. Unlike any computer.</p>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 Apple Inc. All rights reserved.</p>
+    </footer>
+    <script>
+        function revealEasterEgg() {
+            var appleTitle = document.getElementById('appleTitle');
+            appleTitle.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
